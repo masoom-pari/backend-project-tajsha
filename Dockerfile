@@ -4,7 +4,7 @@ WORKDIR /app
 COPY . .
 RUN mvn clean package -DskipTests
 
-# Run Stage 123`n
+# Run Stage 123`np
 FROM eclipse-temurin:17-jre-alpine
 COPY --from=build /app/target/*.jar app.jar
 EXPOSE 8080
